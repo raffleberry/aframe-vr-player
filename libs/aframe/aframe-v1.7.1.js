@@ -42970,4 +42970,3 @@ __webpack_exports__ = __webpack_exports__["default"];
 /******/ })()
 ;
 });
-//# sourceMappingURL=aframe-v1.7.1.js.map

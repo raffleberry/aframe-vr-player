@@ -101,9 +101,9 @@ AFRAME.registerComponent('timeline', {
         let possibleNew = percentGazed * timelineWidth - timelineWidth / 2;
         let possibleTime = Math.floor(percentGazed * this.video.duration);
         let { y, z } = this.hoverEl.getAttribute("position");
-        
+
         if (isNaN(possibleTime) || !possibleTime) possibleTime = 0
-        
+
         this.hoverThumb.getObject3D('mesh').material.map = this.el.sceneEl.systems[THUMBNAILS].getThumb(Math.floor(possibleTime / 60))
 
         this.hoverEl.setAttribute("position", `${possibleNew} ${y} ${z}`);

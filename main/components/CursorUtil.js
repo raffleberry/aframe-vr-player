@@ -15,9 +15,9 @@ const attrs = {
     'animation__fusing': 'property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1',
     'animation__mouseleave': 'property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1',
     'raycaster': 'objects: [clickable]',
-    'geometry': "primitive: ring; radiusInner: 0.2; radiusOuter: 0.4;",
+    'geometry': "primitive: ring; radiusInner: 0.01; radiusOuter: 0.04;",
     'material': "color: black; shader: flat",
-    'position': "0 0 -50",
+    'position': "0 0 -5",
 }
 
 AFRAME.registerComponent('cursor-util', {
@@ -62,7 +62,7 @@ AFRAME.registerComponent('cursor-util', {
                     cursor: "fuse: false;",
                 }, [
                     createEl('a-entity', {
-                        geometry: "primitive: circle; radius: 0.2;",
+                        geometry: "primitive: circle; radius: 0.02;",
                         material: "color: aquamarine; shader: flat;"
                     })
                 ], el)

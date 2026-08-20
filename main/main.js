@@ -17,6 +17,7 @@ import './components/CursorUtil.js'
 import './components/AdjustCamera.js'
 import './components/toggleAdjustUi.js'
 import './components/Subtitles.js'
+import './components/ResolutionScale.js'
 
 
 

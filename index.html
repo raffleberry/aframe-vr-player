@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/assets/vr.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="/libs/aframe/aframe-v1.7.1.js"></script>
+  <script src="/libs/aframe-html.js"></script>
   <script src="/main/main.js" type="module"></script>
   <title>aframe vr player</title>
 </head>
@@ -13,7 +14,7 @@
 <body>
   <input type="file" id="fileInput" style="display: none;">
 
-  <a-scene background="color: grey">
+  <a-scene background="color: grey" resolution-scale="ratio: 1">
 
     <a-entity id="events" events></a-entity>
     <a-entity id="settings" settings></a-entity>
@@ -102,13 +103,24 @@
       </a-entity>
 
       <a-entity dialog-utils id="dialog" position="0 25 -50" rotation="15 0 0" visible="false">
-
+        
       </a-entity>
+      <a-sphere id="uiCursor" radius="0.5" position="0 0 0" material="color: pink"></a-sphere>
+      <a-entity clickable controls id="uiStuff" html="html:#uiRoot; cursor: #uiCursor" position="0 25 -20" rotation="15 0 0" scale="100 100 100"></a-entity>
 
     </a-entity>
 
 
   </a-scene>
+  <div id="uiRoot" style="display: inline-block; background: lavenderblush; color: #333333; border-radius: 1em; padding: 1em; margin:0; accent-color: hotpink;">
+    <p>Version 1.0.1</p>
+    <button id="clicx">Click Me</button>
+  </div>
+  <script>
+    document.querySelector("#clicx").addEventListener("click", () => {
+      console.log("clicked")
+    })
+  </script>
 </body>
 
 </html>
